@@ -1,3 +1,11 @@
+# Wait!
+This is a fork meant for contributing to an already-existing project. THIS IS NOT the actual thing.
+Context: I wanted to contribute, but the project last had a commit 9 years ago and they don't have compilation instructions. I can ask but, again, 9 years.
+In the meantime, I'm gonna do it myself **like a man.** Once it's done, I can say,
+# Compilation
+Download Docker and run the Dockerfile. Tested on Windows 11, x86-64, Docker via WSL.
+
+
 # ctrQuake
 ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
 
