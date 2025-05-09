@@ -41,13 +41,18 @@ INCLUDES	:=	include
 #---------------------------------------------------------------------------------
 ARCH	:=	-march=armv6k -mtune=mpcore -mfloat-abi=hard
 
+##set(CMAKE_CXX_STANDARD 11) ## or 14 !!
+##set(CMAKE_CXX_EXTENSIONS OFF) ## on g++ this ensures: -std=c++11 and not -std=gnu++11
+
 CFLAGS	:=	-g -Wall -O3 -mword-relocations \
 			-fomit-frame-pointer -ffunction-sections -ffast-math \
 			$(ARCH)
 
 CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS -DGAME_HARD_LINKED -DREF_HARD_LINKED -D_3DS_CIA
 
-CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
+
+# Changed -std=g++11 to std=c++11 ?????
+CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=c++11
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
